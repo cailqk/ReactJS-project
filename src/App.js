@@ -1,7 +1,36 @@
+import Workouts from "./custom_components/Contents/Workouts";
+
 function App() {
+  const workouts = [
+    {
+      id: "w1",
+      type: "Swim",
+      distance: 3,
+      date: new Date(2022, 0, 10),
+    },
+    {
+      id: "w2",
+      type: "Run",
+      distance: 10,
+      date: new Date(2022, 0, 11),
+    },
+    {
+      id: "w3",
+      type: "Bike",
+      distance: 25,
+      date: new Date(2022, 0, 12),
+    },
+    {
+      id: "w4",
+      type: "Run",
+      distance: 12,
+      date: new Date(2022, 0, 13),
+    },
+  ];
+
   return (
     <div>
-      <h2>Let's get started!</h2>
+     <Workouts item={workouts}/>
     </div>
   );
 }
