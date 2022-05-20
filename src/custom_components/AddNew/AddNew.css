@@ -1,0 +1,42 @@
+.new-workout {
+    background-color: rgb(31, 31, 31);
+    color: white;
+    padding: 1rem;
+    margin: 2rem auto;
+    width: 80rem;
+    max-width: 95%;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+}
+
+.new-workout button {
+    font: inherit;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border: 2px solid white;
+    background-color: green;
+    color: white;
+    border-radius: 12px;
+    float: right;
+    margin-top: 15px;
+    font-weight: bolder;
+    width: 230px;
+}
+
+.new-workout button:hover,
+.new-workout button:active {
+    background-color: #510674;
+    border-color: #510674;
+}
+
+.new-workout button.alternative {
+    color: #220131;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.new-workout button.alternative:hover,
+.new-workout button.alternative:active {
+    background-color: #ddb3f8;
+}

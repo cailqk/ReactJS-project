@@ -1,4 +1,5 @@
 import Workouts from "./custom_components/Contents/Workouts";
+import AddNew from "./custom_components/AddNew/AddNew";
 
 function App() {
   const workouts = [
@@ -30,6 +31,7 @@ function App() {
 
   return (
     <div>
+      <AddNew />
      <Workouts item={workouts}/>
     </div>
   );
