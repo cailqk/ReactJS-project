@@ -15,21 +15,9 @@ function Workouts(props) {
     <div>
       <Shell className="train">
         <Filter onChangeFilter={filterChangeHandler} selected={filteredMonth} />
-        <WorkoutType
-          type={props.item[0].type}
-          distance={props.item[0].distance}
-          date={props.item[0].date}
-        />
-        <WorkoutType
-          type={props.item[1].type}
-          distance={props.item[1].distance}
-          date={props.item[1].date}
-        />
-        <WorkoutType
-          type={props.item[2].type}
-          distance={props.item[2].distance}
-          date={props.item[2].date}
-        />
+        {props.item.map((el) => (
+          <WorkoutType date={el.date} type={el.type} distance={el.distance} />
+        ))}
       </Shell>
     </div>
   );

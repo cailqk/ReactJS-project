@@ -2,14 +2,14 @@ import "./Filter.css";
 
 const Filter = (props) => {
   const filterHandler = (e) => {
-    props.onChangeFilter(e.target.value)
+    props.onChangeFilter(e.target.value);
   };
 
   return (
     <div className="workouts-filter">
       <div className="workouts-filter_control">
         <label>Filter by month</label>
-        <select onChange={filterHandler}>
+        <select onChange={filterHandler} value={props.selected}>
           <option value="January">January</option>
           <option value="February">February</option>
           <option value="March">March</option>
