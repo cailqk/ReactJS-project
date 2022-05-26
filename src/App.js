@@ -29,9 +29,16 @@ function App() {
     },
   ];
 
+const addWorkoutHandler = (workout) => {
+  console.log('App.js is doing:');
+  workouts.unshift(workout);
+  console.log(workout);
+}
+
+
   return (
     <div>
-      <AddNew />
+      <AddNew onAddWorkout={addWorkoutHandler}/>
      <Workouts item={workouts}/>
     </div>
   );

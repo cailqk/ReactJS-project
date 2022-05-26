@@ -1,7 +1,7 @@
 import "./Form.css";
 import { useState } from "react";
 
-function Form() {
+function Form(props) {
   const [enteredDate, setEnteredDate] = useState("");
   const [enteredType, setEnteredType] = useState("");
   const [enteredDistance, setEnteredDistance] = useState("");
@@ -15,6 +15,7 @@ function Form() {
       distance: enteredDistance,
     };
 
+    props.onAddNewWorkout(enteredData);
     setEnteredDate("");
     setEnteredType("");
     setEnteredDistance("");

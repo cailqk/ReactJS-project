@@ -1,0 +1,24 @@
+.workouts-filter {
+    color: white;
+    padding: 0 1rem;
+  }
+  
+  .workouts-filter_control {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0;
+  }
+  
+  .workouts-filter label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .workouts-filter select {
+    font: inherit;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    border-radius: 12px;
+  }
