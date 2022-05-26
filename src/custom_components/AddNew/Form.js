@@ -66,7 +66,7 @@ function Form(props) {
           />
         </div>
         <div className="new-workout_button">
-          <button type="submit">Add a Workout</button>
+          <button type="submit">Log a Workout</button>
         </div>
       </div>
     </form>

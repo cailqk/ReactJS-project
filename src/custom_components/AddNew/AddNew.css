@@ -15,8 +15,8 @@
     cursor: pointer;
     padding: 1rem 2rem;
     border: 2px solid white;
-    background-color: green;
-    color: white;
+    background-color: white;
+    color: grey;
     border-radius: 12px;
     float: right;
     margin-top: 15px;
@@ -26,8 +26,9 @@
 
 .new-workout button:hover,
 .new-workout button:active {
-    background-color: #510674;
-    border-color: #510674;
+    background-color: green;
+    border-color: green;
+    color: white;
 }
 
 .new-workout button.alternative {

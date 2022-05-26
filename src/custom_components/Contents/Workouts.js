@@ -5,18 +5,27 @@ import Filter from "../UI/Filter";
 import { useState } from "react";
 
 function Workouts(props) {
-  const [filteredMonth, setFilteredMonth] = useState("January");
+  const [filteredMonth, setFilteredMonth] = useState("1");
 
   const filterChangeHandler = (selectedMonth) => {
     setFilteredMonth(selectedMonth);
   };
 
+  const filteredWorkouts = props.item.filter(el => {
+      return el.date.getMonth().toString() === filteredMonth;
+  });
+
   return (
     <div>
       <Shell className="train">
         <Filter onChangeFilter={filterChangeHandler} selected={filteredMonth} />
-        {props.item.map((el) => (
-          <WorkoutType date={el.date} type={el.type} distance={el.distance} />
+        {filteredWorkouts.map((el) => (
+          <WorkoutType
+            key={el.id}
+            date={el.date}
+            type={el.type}
+            distance={el.distance}
+          />
         ))}
       </Shell>
     </div>
