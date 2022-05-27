@@ -5,20 +5,27 @@ import Filter from "../UI/Filter";
 import { useState } from "react";
 
 function Workouts(props) {
-  const [filteredMonth, setFilteredMonth] = useState("0");
+  const [filteredMonth, setFilteredMonth] = useState("");
 
   const filterChangeHandler = (selectedMonth) => {
     setFilteredMonth(selectedMonth);
   };
 
   const filteredWorkouts = props.item.filter((el) => {
+    if (filteredMonth === "") {
+      return true;
+    }
     return el.date.getMonth().toString() === filteredMonth;
   });
 
   let workoutsContent;
 
-  if(filteredWorkouts.length === 0) {
-    workoutsContent = <p className="empty_message">You have no logged workouts for this month.</p>;
+  if (filteredWorkouts.length === 0) {
+    workoutsContent = (
+      <p className="empty_message">
+        You have no logged workouts for this month.
+      </p>
+    );
   } else {
     workoutsContent = filteredWorkouts.map((el) => (
       <WorkoutType
@@ -27,7 +34,7 @@ function Workouts(props) {
         type={el.type}
         distance={el.distance}
       />
-    ))
+    ));
   }
 
   return (

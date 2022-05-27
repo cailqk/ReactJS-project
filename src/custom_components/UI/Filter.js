@@ -10,6 +10,7 @@ const Filter = (props) => {
       <div className="workouts-filter_control">
         <label>Filter by month</label>
         <select onChange={filterHandler} value={props.selected}>
+          <option value="">--------------</option>
           <option value="0">January</option>
           <option value="1">February</option>
           <option value="2">March</option>
