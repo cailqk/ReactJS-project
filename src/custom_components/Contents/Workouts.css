@@ -2,10 +2,11 @@
     padding: 2rem;
     background-color: lightslategray;
     margin: 2rem auto;
-    width: 80rem;
+    width: 60rem;
     max-width: 95%;
     margin-top: 60px;
     position: relative;
+    text-align: center;
 }
 
 .empty_message {
@@ -15,5 +16,4 @@
     border-radius: 12px;
     color: white;
     width: 23rem;
-    margin-left: 25rem;
 }

@@ -3,19 +3,17 @@ import Shell from "../UI/Shell";
 import WorkoutType from "./WorkoutType";
 import Filter from "../UI/Filter";
 import { useState } from "react";
+import WorkoutsChart from './WorkoutsChart'
 
 function Workouts(props) {
-  const [filteredMonth, setFilteredMonth] = useState("");
+  const [filteredYear, setFilteredYear] = useState("");
 
-  const filterChangeHandler = (selectedMonth) => {
-    setFilteredMonth(selectedMonth);
+  const filterChangeHandler = (selectedYear) => {
+    setFilteredYear(selectedYear);
   };
 
   const filteredWorkouts = props.item.filter((el) => {
-    if (filteredMonth === "") {
-      return true;
-    }
-    return el.date.getMonth().toString() === filteredMonth;
+    return el.date.getFullYear().toString() === filteredYear;
   });
 
   let workoutsContent;
@@ -23,7 +21,7 @@ function Workouts(props) {
   if (filteredWorkouts.length === 0) {
     workoutsContent = (
       <p className="empty_message">
-        You have no logged workouts for this month.
+        You have no logged workouts for this year.
       </p>
     );
   } else {
@@ -40,7 +38,8 @@ function Workouts(props) {
   return (
     <div>
       <Shell className="train">
-        <Filter onChangeFilter={filterChangeHandler} selected={filteredMonth} />
+        <Filter onChangeFilter={filterChangeHandler} selected={filteredYear} />
+        <WorkoutsChart workouts={filteredWorkouts}/>
         {workoutsContent}
       </Shell>
     </div>

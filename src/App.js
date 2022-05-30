@@ -7,19 +7,19 @@ const testInfo = [
     id: "w1",
     type: "Swim",
     distance: 3,
-    date: new Date(2022, 0, 10),
+    date: new Date(2020, 0, 10),
   },
   {
     id: "w2",
     type: "Run",
     distance: 10,
-    date: new Date(2022, 2, 11),
+    date: new Date(2020, 2, 11),
   },
   {
     id: "w3",
     type: "Bike",
     distance: 25,
-    date: new Date(2022, 2, 12),
+    date: new Date(2021, 2, 12),
   },
   {
     id: "w4",
