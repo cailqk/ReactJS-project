@@ -34,7 +34,7 @@ function Form(props) {
   };
 
   return (
-    <form onSubmit={submitHandler}>
+    <form onSubmit={submitHandler} className="hidden">
       <div className="new-workout_controls">
         <div className="new-workout_control">
           <label>Date</label>
@@ -65,8 +65,11 @@ function Form(props) {
             onChange={distanceChangeHandler}
           />
         </div>
-        <div className="new-workout_button">
-          <button type="submit">Log a Workout</button>
+        <div>
+          <button type="submit" className="submit">Log a Workout</button>
+          <button type="button" className="cancel" onClick={props.onCancel}>
+            Cancel
+          </button>
         </div>
       </div>
     </form>

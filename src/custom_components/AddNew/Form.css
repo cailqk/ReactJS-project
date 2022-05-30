@@ -1,27 +1,62 @@
 .new-workout_controls {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    text-align: left;
-  }
-  
-  .new-workout_control label {
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    display: block;
-  }
-  
-  .new-workout_control input {
-    font: inherit;
-    padding: 0.5rem;
-    border-radius: 12px;
-    border: 1px solid #ccc;
-    width: 20rem;
-    max-width: 100%;
-  }
-  
-  .new-workout_button {
-    position: relative;
-    border-radius: 12px;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.new-workout_control label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.new-workout_control input {
+  font: inherit;
+  padding: 0.5rem;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  width: 20rem;
+  max-width: 100%;
+}
+
+.submit {
+  font: inherit;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border: 2px solid white;
+  background-color: white;
+  color: grey;
+  border-radius: 12px;
+  margin-top: 2rem auto;
+  margin-left: 10px;
+  font-weight: bolder;
+  width: 200px;
+}
+
+.cancel {
+  font: inherit;
+  cursor: pointer;
+  padding: 1rem;
+  border: 2px solid white;
+  background-color: white;
+  color: grey;
+  border-radius: 12px;
+  margin-top: 20px;
+  margin-left: 10px;
+  font-weight: bolder;
+  width: 200px;
+}
+
+.submit:hover {
+  color: white;
+  border-color: green;
+  background-color: green;
+}
+
+.cancel:hover {
+  color: white;
+  border-color: red;
+  background-color: red;
+}
